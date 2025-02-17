@@ -1,0 +1,49 @@
+:root{
+    --primary-color: #ffb6b6;
+    --secondary-color: #d9d9d9;
+    --tertiary-color: #4d4d4d;
+    --primary-background: #a5a5a5;
+}
+body{
+    margin: 0;
+    background-color: var(--primary-background);
+}
+
+header{
+    background-color: var(--primary-color);
+    color: var(--primary-background);
+    padding: 1rem;
+    text-align: center;
+}
+.logo-name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.logo-name img{
+    height: 100px;
+}
+
+.name{
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.company-text{
+    color: var(--secondary-color);
+}
+
+.name-text{
+    color: #45a7c5;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+nav a{
+    color: var(--primary-background);
+    text-decoration: none;
+   
+    padding: 1rem;
+}
