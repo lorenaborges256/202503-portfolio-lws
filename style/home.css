@@ -1,0 +1,11 @@
+.cover-photo img{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details{
+    padding: 20px;
+    font-size: 1em;
+}

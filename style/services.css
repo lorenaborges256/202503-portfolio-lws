@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+article {
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    margin: 24px;
+}
+
+article div img{
+    width: 300px;
+}
+
+.service-text{
+    width: 300px;
+}
