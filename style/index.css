@@ -16,9 +16,8 @@ body{
 header{
     background-color: var(--primary-color);
     color: var(--primary-background);
-    padding: 1rem;
+    padding: 16px;
     text-align: center;
-    /* border-bottom: #45a7c5 3px solid; */
 }
 .logo-name{
     font-size: 2rem;
@@ -26,11 +25,14 @@ header{
 }
 .logo-name img{
     height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .name{
     font-size: 28px;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .company-text{
@@ -63,9 +65,35 @@ footer{
     justify-content: space-around;
 }
 .social-media a i{
-    font-size: 2rem;
     color: var(--tertiary-color);
+    font-size: 20px;
+    
 }
 .info{
     color: var(--tertiary-color);
+}
+
+@media screen and (min-width: 576px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .logo-name{
+        margin-bottom: 0;
+    }
+    nav{
+        width: 50%;
+
+    }
+    .social-media{
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 768px){
+    nav{
+        width: 70%;
+    }
 }
