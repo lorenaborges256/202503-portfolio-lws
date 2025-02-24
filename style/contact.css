@@ -14,7 +14,7 @@ main{
     font-size: 1.2rem;
 }
 
-.form-element input{
+.form-input{
     border: 1px solid var(--primary-color);
     outline: none;
     font-size: 1.1rem;
@@ -23,7 +23,7 @@ main{
     /* height: 35px; */
 }
 
-.form-element input:not(.form-element textarea){
+.form-input:not(.form-textarea){
     height: 35px;
 }
 
@@ -31,7 +31,7 @@ main{
     box-shadow: 0 0 10px 3px var(--primary-color);
 }
 
-.form-element textarea{
+.form-textarea{
     resize: vertical;
 }
 .btn-div{
@@ -46,4 +46,18 @@ main{
     border: none;
     background-color: var(--primary-color);
     border-radius: 4px;
+}
+
+@media screen and (min-width: 576px){
+    form{
+        width: 500px;
+        .form-element{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .form-input{
+            width: 85%;
+        }
+        
+    }
 }
