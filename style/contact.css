@@ -11,10 +11,10 @@ main{
 }
 
 .form-element label{
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-.form-input{
+.form-element input{
     border: 1px solid var(--primary-color);
     outline: none;
     font-size: 1.1rem;
@@ -23,15 +23,15 @@ main{
     /* height: 35px; */
 }
 
-.form-input:not(.form-textarea){
+.form-element input:not(.form-element textarea){
     height: 35px;
 }
 
-.form-input:focus{
+.form-element:focus{
     box-shadow: 0 0 10px 3px var(--primary-color);
 }
 
-.form-textarea{
+.form-element textarea{
     resize: vertical;
 }
 .btn-div{
