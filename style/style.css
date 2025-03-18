@@ -1,13 +1,15 @@
 :root{
-    --primary-color: #ffb6b6;
+    --primary-color: #9EFFAD;
     --secondary-color: #d9d9d9;
     --tertiary-color: #4d4d4d;
     --primary-background: black;
     --text-color: white;
 }
+
 body{
     margin: 0;
     background-color: var(--primary-background);
+    /* This is  one way to place header, body and footer*/
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,44 +18,36 @@ body{
 
 header{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--primary-color);
     color: var(--primary-background);
-    padding: 16px;
+    padding: 0 16px 8px 16px;
     text-align: center;
 }
 .logo-name{
+    display: flex;
     font-size: 2rem;
     font-weight: bold;
 }
 .logo-name img{
     height: 80px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 10px 0 0;
 }
 
 .name{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 70%;
+    font-size: 32px;
+    margin: 0;
+    color: var(--text-color);
 }
-
-.company-text{
-    color: var(--secondary-color);
-}
-
-.name-text{
-    color: #45a7c5;
-}
-
 nav{
     display: flex;
-    align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; 
     font-size: 1.5rem;
+    width: 100%;
 }
 nav a{
     color: var(--tertiary-color);
@@ -71,49 +65,180 @@ section {
     justify-content: space-around;
     /* padding: 20px; */
     background-color: var(--secondary-color);
-
 }
 
 footer{
     background-color: var(--primary-color);
     color: var(--tertiary-color);
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+}
+.map{
+    display: none;
+}
+.subscribe{
+    display: none;
 }
 .social-media{
     display: flex;
     justify-content: space-around;
 }
 .social-media a i{
+    font-size: 1.5rem;
     color: var(--tertiary-color);
-    font-size: 20px;
-    
+    padding: 5px;
+}
+.social-name{
+    display: none;
 }
 .info{
     color: var(--tertiary-color);
+    font-size: 1rem;
+}
+.footer-address{
+    display: block;
+}
+.footer-phone, .footer-email{
+    display: none;
 }
 
-@media screen and (min-width: 576px){
+/* Small Device Small (Android Compact): 412 x 917 pixels
+Site is developed on Mobile-Firt approach*/
+
+/* Medium (Android Expanded): 1280 x 800 pixels */
+@media screen and (min-width: 801px){
     header{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
-    .logo-name{
-        margin-bottom: 0;
+    .logo-name img{
+        margin: 0;
+    }
+    .name{
+        display: none;
+
+    }
+    nav{
+        width: 70%;
+        padding: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .map{
+        display: none;
+    }
+    .subscribe{
+        display: none;
+    }
+    .social-media{
+        width: 30%;
+        padding-top: 15px;
+    }
+    .info{
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer-address{
+        display: flex;
+    }
+    .footer-email{
+        display: flex;
+    }
+    .footer-phone {
+        display: none;
+    } 
+
+}
+
+/* Large (Desktop): 1440 x 1024 pixels */
+@media screen and (min-width: 1024px){  
+    .name{
+        width: 30%;
+        display:contents;
+        padding: 20px;
     }
     nav{
         width: 50%;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
 
     }
-    .social-media{
+    .map{
+        display: block;
+        order: 1;
+        width: 25%;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+
+        }
+    .info{
         width: 20%;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+        order: 2;
     }
-}
-@media screen and (min-width: 768px){
-    nav{
-        width: 70%;
+    .footer-address, .footer-email, .footer-phone{
+        display: flex;
+        margin: 0;
     }
+    .social-media{
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        justify-content: center;
+        padding: 0 1rem;
+        order: 3;
+    }
+    .social-name{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        order: 4;
+    }
+    .social-name p{
+        font-size: 1.5rem;
+        color: var(--tertiary-color);
+        margin: 0;
+       
+
+    }
+    .subscribe{
+        display: block;
+        width: 30%;
+        order: 5;
+    }
+    .subscribe h3{
+        text-align: center;
+        margin: 8px 0;
+    }
+    input[type=text], input[type=email]{
+        width: 80%;
+        padding: 5px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+
+    }
+
 }

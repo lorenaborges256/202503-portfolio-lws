@@ -4,6 +4,12 @@ main{
     align-items: center;
 }
 
+.highlight{
+    background-color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .form-element{
     display: flex;
     flex-direction: column;
