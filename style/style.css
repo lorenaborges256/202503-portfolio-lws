@@ -4,6 +4,7 @@
     --tertiary-color: #4d4d4d;
     --primary-background: black;
     --text-color: white;
+    --button-color: #4CAF50;
 }
 
 body{
@@ -23,7 +24,7 @@ header{
     justify-content: space-between;
     background-color: var(--primary-color);
     color: var(--primary-background);
-    padding: 0 16px 8px 16px;
+    padding: 0.5rem 1rem;
     text-align: center;
 }
 .logo-name{
@@ -32,13 +33,13 @@ header{
     font-weight: bold;
 }
 .logo-name img{
-    height: 80px;
-    margin: 0 10px 0 0;
+    height: 5rem;
+    margin: auto;
 }
 
 .name{
     width: 70%;
-    font-size: 32px;
+    font-size: 2rem;
     margin: 0;
     color: var(--text-color);
 }
@@ -46,25 +47,28 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 100%;
+    padding: 0.5rem;
 }
 nav a{
     color: var(--tertiary-color);
     text-decoration: none;
-
 }
+
+/* Highlight nav */
+.highlight{
+    background-color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
 main {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
-}
-section {
-    display: flex;
-    justify-content: space-around;
-    /* padding: 20px; */
-    background-color: var(--secondary-color);
 }
 
 footer{
@@ -82,11 +86,11 @@ footer{
 .social-media{
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 .social-media a i{
-    font-size: 1.5rem;
+    font-size: 1.5rem;    
     color: var(--tertiary-color);
-    padding: 5px;
 }
 .social-name{
     display: none;
@@ -110,18 +114,21 @@ Site is developed on Mobile-Firt approach*/
     header{
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
     }
     .logo-name img{
-        margin: 0;
+        margin: 1rem;
     }
     .name{
         display: none;
-
     }
     nav{
         width: 70%;
-        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0;
+    }
+    .highlight{
+        padding: 0.8rem;
     }
 
     footer{
@@ -135,8 +142,10 @@ Site is developed on Mobile-Firt approach*/
         display: none;
     }
     .social-media{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 30%;
-        padding-top: 15px;
     }
     .info{
         width: 70%;
@@ -159,12 +168,18 @@ Site is developed on Mobile-Firt approach*/
 @media screen and (min-width: 1024px){  
     .name{
         width: 30%;
-        display:contents;
-        padding: 20px;
+        font-size: 2.5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     nav{
         width: 50%;
     }
+    .highlight{
+        padding: 2rem 1rem;
+     }
     footer{
         display: flex;
         flex-direction: row;
@@ -212,8 +227,7 @@ Site is developed on Mobile-Firt approach*/
     .social-name p{
         font-size: 1.5rem;
         color: var(--tertiary-color);
-        margin: 0;
-       
+        margin: 0;      
 
     }
     .subscribe{
@@ -233,9 +247,9 @@ Site is developed on Mobile-Firt approach*/
         border-radius: 4px;
     }
     input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
+        background-color: var(--button-color);
+        color: var(--text-color);
+        padding: 1rem 1.5rem;
         border: none;
         border-radius: 4px;
 

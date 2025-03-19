@@ -1,38 +1,45 @@
-
-/* Highlight nav */
-.highlight{
-  background-color: var(--secondary-color);
-  padding: 5px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 article {
   width: 100%;
   background-color: var(--secondary-color);
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  margin: 24px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+.company-name-article{
+  display: none;
 }
 
-article div img{
-  width: 90%;
-  border-radius: 10px;
-  margin: 24px;
-
+.company-image img{
+  width: 100%;
+  border-radius: 1rem;
 }
-.company-image{
-  display: flex;
-  justify-content: center;
+.company-h2{
+  font-size: 1rem;
+  margin: 1rem;
+}
+.company-h1{
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.btn{
+  width: 30%;
+  display: inline-block;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem;
+  cursor: pointer;
+
 }
 
 .company-description{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 24px;
+  display: none;
 }
 
 section{
@@ -53,4 +60,78 @@ section{
 section div img{
   width: 100%;
   text-align: left;
+}
+
+
+/* Medium (Android Expanded): 1280 x 800 pixels */
+@media screen and (min-width: 801px){
+  .company-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .company-name-article{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+  }
+  .company-h2{
+    font-size: 1rem;
+    margin: 0.5rem;
+    font-style: italic;
+  }
+  .company-h1{
+    font-size: 1rem;
+    margin: 1rem;
+  }
+
+}
+
+/* Large (Desktop): 1440 x 1024 pixels */
+@media screen and (min-width: 1024px){  
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1.5rem 0;
+    padding: 0 0 0 1.5rem;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 0;
+  }
+  .company-name-article{
+    display: none;
+  }
+  .company-text-article{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .company-text-article a{
+    display: block;
+
+  }
+    .company-image{
+      display: flex;
+      justify-content: center;
+  }
+  .company-image img{
+    border-radius: 0;
+  }
+
+  .company-description{
+    display: inline-block;
+    align-items: center;
+  }
+
 }
