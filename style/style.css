@@ -56,13 +56,7 @@ nav a{
     text-decoration: none;
 }
 
-/* Highlight nav */
-.highlight{
-    background-color: var(--secondary-color);
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
+
 
 main {
     width: 100%;
@@ -127,9 +121,7 @@ Site is developed on Mobile-Firt approach*/
         justify-content: space-between;
         margin: auto 0;
     }
-    .highlight{
-        padding: 0.8rem;
-    }
+
 
     footer{
         display: flex;
@@ -177,9 +169,8 @@ Site is developed on Mobile-Firt approach*/
     nav{
         width: 50%;
     }
-    .highlight{
-        padding: 2rem 1rem;
-     }
+
+   
     footer{
         display: flex;
         flex-direction: row;

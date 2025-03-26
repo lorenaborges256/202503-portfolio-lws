@@ -1,3 +1,12 @@
+/* Highlight nav */
+.highlight{
+  background-color: var(--secondary-color);
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 6px;
+  font-weight: bold;
+}
+
 article {
   width: 100%;
   background-color: var(--secondary-color);
@@ -9,6 +18,10 @@ article {
 }
 .company-name-article{
   display: none;
+}
+article p{
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 .company-image img{
@@ -33,38 +46,29 @@ article {
   border-radius: 5px;
   font-size: 1.5rem;
   text-decoration: none;
-  margin: 1rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
   cursor: pointer;
-
 }
-
-.company-description{
+.title{
   display: none;
 }
-
-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  padding: 20px;
-  background-color: var(--secondary-color);
-  margin: 10px 0 10px 0;
+.service1{
+  display: none;  
 }
-.title h1{
-  size: 2rem;
-  width: 100%;
-  text-align: center;
+.service2{
+  display: none;  
 }
-
-section div img{
-  width: 100%;
-  text-align: left;
+.service3{
+  display: none;  
 }
 
 
 /* Medium (Android Expanded): 1280 x 800 pixels */
 @media screen and (min-width: 801px){
+  .highlight{
+    padding: 0.8rem;
+}
   .company-description{
     display: flex;
     flex-direction: column;
@@ -92,15 +96,58 @@ section div img{
     margin: 1rem;
   }
 
+.company-description{
+  display: none;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  margin: 10px;
+}
+.title h1{
+  size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+section div img{
+  width: 100%;
+  text-align: left;
+}
+
+.title{
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+}
+.service1{
+  width: 40%;
+  display: flex;  
+}
+.service2{
+  width: 40%;
+  display: flex;  
+}
+.service3{
+  display: none;  
+}
 }
 
 /* Large (Desktop): 1440 x 1024 pixels */
 @media screen and (min-width: 1024px){  
+  .highlight{
+    padding: 2rem 1rem;
+  }
   article {
     display: flex;
     flex-direction: row-reverse;
     margin: 1.5rem 0;
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 0 1rem;
     width: 100%;
     background-color: var(--secondary-color);
     border-radius: 0;
@@ -114,24 +161,40 @@ section div img{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     margin: 1rem;
   }
 
   .company-text-article a{
-    display: block;
-
+    display: inline-block;
   }
-    .company-image{
-      display: flex;
-      justify-content: center;
+  .company-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
   }
   .company-image img{
+    width: 100%;
+    object-fit: cover;
     border-radius: 0;
   }
 
   .company-description{
     display: inline-block;
     align-items: center;
+  }
+
+  .service1{
+    width: 27%;
+    display: flex;  
+  }
+  .service2{
+    width: 27%;
+    display: flex;  
+  }
+  .service3{
+    width: 27%;
+    display: flex;  
   }
 
 }
