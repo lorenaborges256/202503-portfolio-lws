@@ -1,23 +1,41 @@
-main{
+main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    justify-content: center;
+    flex-wrap: wrap;
 
-.highlight{
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 1rem;
     background-color: var(--secondary-color);
-    padding: 5px;
-    border-radius: 5px;
+    margin: 1rem 0;
+}
+.title{
+    width: 100%;
+    display: inline-block;
+  }
+  .title h1{
+    size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  form{
+    width: 90%;
 }
 
 .form-element{
+  
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .form-element label{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .form-input{
@@ -50,20 +68,39 @@ main{
     min-width: 120px;
     font-size: 1.1rem;
     border: none;
-    background-color: var(--primary-color);
-    border-radius: 4px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border-radius: 5px;
 }
 
-@media screen and (min-width: 576px){
-    form{
-        width: 500px;
-        .form-element{
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .form-input{
-            width: 85%;
-        }
-        
+/* Medium (Android Expanded): 1280 x 800 pixels */
+@media screen and (min-width: 801px){
+
+form{
+    width: 500px;
+    .form-element{
+        flex-direction: row;
+        justify-content: space-between;
     }
+    .form-input{
+        width: 85%;
+    }
+    
+}
+}
+
+/* Large (Desktop): 1440 x 1024 pixels */
+@media screen and (min-width: 1024px){
+
+form{
+    width: 500px;
+    .form-element{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .form-input{
+        margin: 0;
+        width: 85%;
+    }
+}
 }
