@@ -18,28 +18,24 @@ main {
   cursor: pointer;
 }
 
-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;    
-  width: 100%;
-  padding: 20px;
-  background-color: var(--secondary-color);
-  margin: 1rem 0;
-}
 .title{
-  width: 100%; 
-  display: inline-block;
+  display: flex;
+  margin-top: 1rem;
 }
+
 .title h1{
-  size: 2rem;
   width: 100%;
-  text-align: center;
+  
 }
+
+
+
+
   
 section div img{
   width: 100%;
-  text-align: left;
+  height: 100%;
+
 }
 
 .service1{
@@ -47,7 +43,6 @@ section div img{
   border-radius: 10px;
   display: flex;
   align-items: center;
-
 }
 
 .service1-img2{
@@ -86,6 +81,7 @@ section div img{
     flex-direction: column;
     padding: 0 0.5rem;
   }
+
 
   .service2-img1{
     width: 50%;

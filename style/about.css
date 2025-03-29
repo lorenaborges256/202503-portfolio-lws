@@ -3,25 +3,10 @@ main {
     justify-content: center;
     flex-wrap: wrap;    
 }
-
 .title{
-    width: 100%;
-    display: inline-block;
-  }
-  .title h1{
-    size: 2rem;
-    width: 100%;
-    text-align: center;
-  }
+    margin-top: 1rem;
+ }
 
-section{
-    display: flex;
-    flex-wrap: wrap; 
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    margin: 1rem 0;
-}
 .about{
     margin: 1rem 0;
     width: 100%;
@@ -30,7 +15,7 @@ section{
 
 .about img{
     width: 100%;
-    text-align: center;
+    border-radius: 50%;
 }
 .about-text{
     width: 100%;
@@ -38,7 +23,7 @@ section{
 }
 
 .about h1{
-    size: 2rem;
+    font-size: 2rem;
     width: 100%;
     text-align: center;
 }
@@ -52,7 +37,6 @@ section{
     font-size: 1rem;
     margin: 1rem;
 }
-
 .btn{
     width: 30%;
     display: inline-block;
@@ -67,66 +51,100 @@ section{
     cursor: pointer;
 }
 
+
+.btn-about{   
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-about:hover {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+}
+
+
+
 /* Medium (Android Expanded): 1280 x 800 pixels */
 @media screen and (min-width: 801px){
-.about-y1{
-    width: 100%;
-    display: flex;
-    margin-bottom: 1rem;
-}
-.about-img{
-    width: 50%;    
-}
-.about-text{
-    width: 70%;
-    display: inline-block;
-}
-.about-y2{
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 1rem;
-}
-.about-y3{
-    width: 100%;
-    display: flex;
-    margin-bottom: 1rem;
-}
+    .about-y1{
+        width: 100%;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .about-img{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-text{
+        width: 70%;
+        display: inline-block;
+    }
+    .about-y2{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 1rem;
+    }
+    .about-y3{
+        width: 100%;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .btn-about{
+        display: none;
+    }
 }
 
   /* Large (Desktop): 1440 x 1024 pixels */
 @media screen and (min-width: 1024px){
-.about{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 1rem 0;    
-}
-.about-y1{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-.about-img{
-    width: 100%;    
-}
-.about-text{
-    width: 100%;
-    display: inline-block; 
-}
+    .nav-about{
+        display: none;
+    }
+    .btn-about{
+        display: none;
+    }
+    .about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 1rem 0;    
+    }
+    .about-y1{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    .about-img{
+        width: 100%;    
+    }
+    .about-text{
+        width: 100%;
+        display: inline-block; 
+    }
 
-.about-y2{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    flex-direction: column-reverse;
-    margin-bottom: 1rem;
-}
-.about-y3{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
+    .about-y2{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-bottom: 1rem;
+    }
+    .about-y3{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
 }
