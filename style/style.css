@@ -5,7 +5,6 @@
     --primary-background: black;
     --text-color: white;
     --button-color: #4CAF50;
-    
 }
 
 body{
@@ -28,12 +27,15 @@ header{
     color: var(--primary-background);
     padding: 0.5rem 1rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
+
 .logo-name{
     display: flex;
     font-size: 2rem;
     font-weight: bold;
 }
+
 .logo-name img{
     height: 5rem;
     margin: auto;
@@ -63,6 +65,32 @@ nav a:hover{
     color: var(--primary-background);
     text-decoration: underline;
 }
+.btn{
+    width: 30%;
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.btn1{
+    width: 30%;
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
 
 .btn:hover {
     color: var(--primary-background);
@@ -75,14 +103,15 @@ nav a:hover{
 }
 
 #highlight{
-    color: var(-primary-background);
+    color: var(--primary-background);
     font-size: 1.8rem;
     font-weight: bold;
     animation: highlight 3s 4;
-  }
-  @keyframes highlight {
+}
+  
+@keyframes highlight {
     50% {text-shadow: 1px 1px 10px var(--primary-background);}
-  }
+}
 
 main {
     width: 100%;
@@ -90,7 +119,13 @@ main {
     justify-content: center;
     flex-wrap: wrap;
 }
-
+article div h4{
+    margin: 0;
+    font-family: monospace;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--primary-background); 
+}
 
 article div div h1{
     margin: 0;
@@ -100,11 +135,17 @@ article div div h2{
 }
 section{
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
     width: 100%;
     padding: 1rem;
     background-color: var(--secondary-color);
-    margin: 1rem 0;
+    margin: 1rem;
+}
+section div img{
+    width: 100%;
 }
 
 .title{
@@ -114,7 +155,7 @@ section{
     justify-content: center;
 }
 .title h1{
-    size: 2rem;
+    font-size: 2rem;
     width: 100%;
     text-align: center;
 }
@@ -131,6 +172,7 @@ section{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 1rem;
 }
 
 footer{
@@ -138,6 +180,7 @@ footer{
     color: var(--tertiary-color);
     text-align: center;
     padding: 2rem;
+    margin-top: 1rem;
 }
 .map{
     display: none;
@@ -148,7 +191,7 @@ footer{
 .social-media{
     display: flex;
     justify-content: space-around;
-    text-align: center;
+
 }
 .social-media a i{
     font-size: 1.5rem;    
@@ -190,7 +233,6 @@ Site is developed on Mobile-Firt approach*/
         justify-content: space-between;
         margin: auto 0;
     }
-
 
     footer{
         display: flex;
@@ -265,12 +307,15 @@ Site is developed on Mobile-Firt approach*/
     .footer-address, .footer-email, .footer-phone{
         display: flex;
         margin: 0;
+        text-align: left;
+        font-size: 0.9rem;
     }
     .social-media{
         width: 10%;
         display: flex;
         flex-direction: column;        
         justify-content: center;
+        align-items: flex-end;
         padding: 0 1rem;
         order: 3;
     }
@@ -296,7 +341,7 @@ Site is developed on Mobile-Firt approach*/
         order: 5;
     }
     .subscribe form{
-    width: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -307,27 +352,36 @@ Site is developed on Mobile-Firt approach*/
         margin: 8px 0;
     }
 
-    input[type=text], input[type=email]{
-        width: 250px;
-        display: flex;
-        padding: 5px;
-        margin: 0.5rem 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+    form label {
+        width: 90%;
+        text-align: left;
+        font-size: 1rem;
     }
+    form input[type=text], form input[type=email] {
+        width: 90%;
+        padding: 0.5rem 0.6rem;
+        margin: 0.5rem 0;
+        display: inline-block;
+        outline: none;
+        
+        font-size: 1.1rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-family: monospace;    
+    }
+
     input[type=submit] {
         background-color: var(--button-color);
         color: var(--text-color);
-        padding: 1rem 1.5rem;
+        padding: 0.6rem 0.6rem;
+        margin: 0.5rem 0;
         border: none;
         border-radius: 4px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         cursor: pointer;
     }
     input[type=submit]:hover {
         color: var(--primary-background);
         text-decoration: underline;
     }
-
-
 }

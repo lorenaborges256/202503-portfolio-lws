@@ -1,48 +1,16 @@
-main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-.title{
-    margin-top: 1rem;
- }
-
-section{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    margin: 1rem 0;
-}
-.title{
-    width: 100%;
-    display: inline-block;
-  }
-.title h1{
-    size: 2rem;
-    width: 100%;
-    text-align: center;
-}
-
-
 .contact{
     width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* flex-direction: column; */
-
     align-items: center;
-    /* justify-content: center; */
 }
 
 form{
 width: 90%;
-
 }
+
 form h2{
     text-align: center;
     font-size: 1.5rem;
@@ -52,33 +20,34 @@ form h2{
 .form-element{  
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
 }
 
 .form-element label{
     font-size: 1rem;
+    text-align: left;
 }
 
 .form-input{
-    border: 1px solid var(--primary-color);
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
     outline: none;
+    border: 2px dashed var(--secondary-color);
     font-size: 1.1rem;
     box-sizing: border-box;
     border-radius: 4px;
-    /* height: 35px; */
-}
-
-.form-input:not(.form-textarea){
-    height: 35px;
-}
-
-.form-element:focus{
-    box-shadow: 0 0 10px 3px var(--primary-color);
+    font-family: monospace;    
 }
 
 .form-textarea{
     resize: vertical;
 }
+.company-image{
+    display: none;
+}
+
 .btn-div{
     text-align: center;
     margin-bottom: 24px;
@@ -103,31 +72,47 @@ form h2{
 /* Medium (Android Expanded): 1280 x 800 pixels */
 @media screen and (min-width: 801px){
 
-form{
-    .form-element{
-        /* width: 500px; */
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .form-input{
-        width: 85%;    
-    }
-    
+.company-image{
+    display: inline-block;
+    width: 30%;
 }
+
+.form-element{  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-input{
+    width: 85%;    
+}
+
 }
 
 /* Large (Desktop): 1440 x 1024 pixels */
 @media screen and (min-width: 1024px){
+.company-image{
+    display: block;
+    width: 50%;
+    max-width: 500px;
+}
 
 form{
-    width: 500px;
-    .form-element{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .form-input{
-        margin: 0;
-        width: 85%;
-    }
+    width: 50%;
+}
+.form-element label{
+    width: 20%;
+}
+.form-element{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.contact-info{
+    width: 40%;
+}
+div.contact-social{
+    width: 40%;
 }
 }

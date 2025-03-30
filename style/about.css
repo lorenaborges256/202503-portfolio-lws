@@ -1,11 +1,3 @@
-main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;    
-}
-.title{
-    margin-top: 1rem;
- }
 
 .about{
     margin: 1rem 0;
@@ -37,20 +29,6 @@ main {
     font-size: 1rem;
     margin: 1rem;
 }
-.btn{
-    width: 30%;
-    display: inline-block;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem;
-    cursor: pointer;
-}
-
 
 .btn-about{   
     border: 2px solid var(--tertiary-color);
@@ -70,9 +48,6 @@ main {
     background-color: var(--tertiary-color);
     color: var(--text-color);
 }
-
-
-
 /* Medium (Android Expanded): 1280 x 800 pixels */
 @media screen and (min-width: 801px){
     .about-y1{
@@ -108,6 +83,11 @@ main {
 
   /* Large (Desktop): 1440 x 1024 pixels */
 @media screen and (min-width: 1024px){
+    .about{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
     .nav-about{
         display: none;
     }
